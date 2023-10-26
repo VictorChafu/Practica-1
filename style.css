@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{ /*Pseudo clase*/
+    scroll-behavior: smooth; /*baja de una manera mas bonita hasta la secction que seleccionaste en el navbar*/
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, hsla(258, 43%, 68%, 0.751) 0%, hsla(318, 88%, 87%, 0.244) 100%), url(./img/clay-banks-TalkML4fkwg-unsplash.jpg);
+    background-repeat: no-repeat; /*Sirve para que no se repita la imagen, que quede como una sola*/
+    background-size: cover; /*Lo amplia y lo deja la medio*/
+    background-attachment: fixed; /*Para que baje toda la pagina, pero la imagen se mantenga ahi*/
+    background-position: center; /*Que quede al centro*/
+}
+.head{
+    padding: 0; /*muchas secciones tienen contenedor head juntos, y arriba ya se le habia asignado un padding arriba y abajo, entonces de este modo el head se resetea a 0 en esa seccion */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.hamburger{
+    position: fixed; /*Se mantenga fijo aunque se haga scroll*/
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(0, 0, 0,.5);
+}
+.menu-navegation{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgb(0, 0, 0, 5.)
+
+}
+
+.spread{
+    transform: translate(0);
+}
+.menu-navegation a{
+    color: white;
+    text-decoration: none;
+}
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+
+/*Nuestro servicio*/
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: #f99185;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedor-servicio img{
+    width: 40%;
+}
+.checklist-service{
+    width: 45%;
+}
+.service{
+    margin-bottom: 20px;
+}
+.n-service{
+    margin-bottom: 7px;
+}
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc3eb 100%);
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+.gallery{
+    background: #f2f2f2;
+    
+}
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.img-galeria{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 5.);
+    cursor: pointer;
+    
+}
+.imagen-light{
+    position: fixed;
+    background: rgb(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+
+}
+.show{
+    transform: translate(0);
+}
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+.showImage{
+    transform: scale(1) ;
+}
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width:30px;
+    cursor: pointer;
+
+}
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cont-expert img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+.n-expert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+/*footer*/
+
+footer{
+    background-color: #a18cd1;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.brand+p{
+    font-weight: 500;
+}
+
+@media screen and (max-width:800px){
+    .menu-navegation{
+        width: 50vw;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-servicio img{
+        width: 80px;
+        margin-bottom: 40px;
+    }
+    .checklist-service{
+        width: 80%;
+    }
+    .service{
+        margin-bottom: 40px;
+    }
+    .agregar-imagen{
+        width: 80%;
+    }
+    .img-galeria{
+        width: 45%;
+    }
+    .cont-expert{
+        width: 80%;
+
+    }
+
+}
