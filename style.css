@@ -230,7 +230,13 @@ brand{
 
 @media screen and (max-width:800px){
     .menu-navegation{
-        width: 50vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-navegation a:hover{
+        background-color: black;
+        z-index: 10;
     }
     .titulo{
         font-size: 40px;
